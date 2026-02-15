@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cornish Mining Dashboard</title>
+    <script type="module" src="https://js.arcgis.com/calcite-components/2.5.1/calcite.esm.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://js.arcgis.com/calcite-components/2.5.1/calcite.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.32/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.32/"></script>
+
+    <style>
+        html, body, #viewDiv { padding: 0; margin: 0; height: 100%; width: 100%; }
+        #chartPanel { padding: 20px; }
+        .chart-container { position: relative; height: 300px; width: 100%; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <calcite-shell>
+        <calcite-navigation slot="header">
+            <calcite-navigation-logo slot="logo" heading="Cornish Mining Heritage" description="Production Dashboard"></calcite-navigation-logo>
+        </calcite-navigation>
+
+        <div id="viewDiv"></div>
+
+        <calcite-shell-panel slot="panel-end" position="end" width-scale="l">
+            <calcite-panel heading="Mine Analytics">
+                <div id="chartPanel">
+                    <h2 id="mineName">Select a Mine</h2>
+                    <p id="instruction">Click a blue point on the map to see its history.</p>
+                    
+                    <div class="chart-container">
+                        <canvas id="productionChart"></canvas>
+                    </div>
+
+                    <div id="results"></div>
+                </div>
+            </calcite-panel>
+        </calcite-shell-panel>
+    </calcite-shell>
+
+    <script src="main.js"></script>
+</body>
+</html>
