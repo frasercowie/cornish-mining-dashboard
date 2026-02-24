@@ -6,8 +6,8 @@
     <script type="module" src="https://js.arcgis.com/calcite-components/2.5.1/calcite.esm.js"></script>
     <link rel="stylesheet" type="text/css" href="https://js.arcgis.com/calcite-components/2.5.1/calcite.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
     <link rel="stylesheet" href="https://js.arcgis.com/4.32/esri/themes/light/main.css">
-    <script src="https://js.arcgis.com/4.32/"></script>
 
     <style>
         html, body, #viewDiv { padding: 0; margin: 0; height: 100%; width: 100%; }
@@ -27,18 +27,17 @@
             <calcite-panel heading="Mine Analytics">
                 <div id="chartPanel">
                     <h2 id="mineName">Select a Mine</h2>
-                    <p id="instruction">Click a blue point on the map to see its history.</p>
+                    
+                    <p id="instruction">Click on a mine to see its history.</p>
                     
                     <div class="chart-container">
                         <canvas id="productionChart"></canvas>
                     </div>
-
-                    <div id="results"></div>
-                </div>
+                    </div>
             </calcite-panel>
         </calcite-shell-panel>
     </calcite-shell>
 
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
